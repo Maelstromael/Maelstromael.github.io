@@ -1,3 +1,7 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .title{
     background-color: lightblue;
     text-align: center;
@@ -24,31 +28,48 @@
     border-right: solid black;
     height: 100%;
     text-align: center;
+    color: white;
 }
 
 .column{
     clear: left;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .column div{
     float: left;
     height: 300px;
-    text-align: center;
 }
 
 .column1{
-    width: 25%;
+    flex: 25%;
     background-color: gray;
 }
 
 .column2{
-    width: 50%;
+    flex: 50%;
+    min-width: 300px;
     background-color: darkgray;
 }
 
 .column3{
-    width: 25%;
+    flex: 25%;
     background-color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+    .column1 {
+        order: 1;
+    }
+
+    .column2 {
+        order: 3;
+    }  
+
+    .column3 {
+        order: 2;
+    }
 }
 
 footer{
@@ -57,4 +78,5 @@ footer{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     padding: 1px;
+    color: white;
 }
